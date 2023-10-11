@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reconnaissance faciale</title>
+</head>
+<body>
+    <h1>Téléchargez une image</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <div id="result">
+        <!-- Le résultat de la reconnaissance faciale sera affiché ici après le traitement côté serveur -->
+        {% if result %}
+            <p>Résultat : {{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
